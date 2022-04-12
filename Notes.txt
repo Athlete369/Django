@@ -1,3 +1,16 @@
 1. Start a Django Project
     django-admin startproject PROJECT_NAME
-2. 
+    This command will create some starter files and folders for our web application
+    It created lecture3 directory and inside It
+    1. manage.py
+    2. lecture3 folders
+        1.settings.py ---default settings
+        2. urls.py --- table of contents of web applicaiton,... sort of different routes in web applicaiton3
+2.  We can try runngin this web application using below command
+    python manage.py runserver
+3.  One Django project may have many django applications within it.
+4.  Next step is to create a django applicaiton, and how we can do this ---
+    python manage.py startapp hello
+5.  It generated a number of files in hellio directory again, we will not be looking at all of them
+6.  Let's first see views.py ---- which basicallty tell what a user sees when it visits a particular route
+7.  We can install our hello app in lecture3 project by adding this hello in settingspy--installed_apps
