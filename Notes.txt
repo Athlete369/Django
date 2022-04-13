@@ -33,4 +33,15 @@
     {% load static %} on top of the html file
 18. These changes will not be detected byt the runserver and we need to manually restart our server.
 19. Let's create a to do app
-20.
+20. Template inheritance is also in Django template engine just like Jinja2 .
+21. We don't need to hardcode the url anywhere, as if we change the url we need to changes at many places
+    So, we can use the names for the url instead which is defined in urls.py files  
+    {% url 'name' %}
+22. Django checks for CSRF(Cross-site Reference Forgery) tokens, which is security measure to protect our website from attacks
+23. in our post methos element we need to add
+    {% csrf_token %}
+    All these are handled by Djangoi middleware where it has modules to generate tokens and on submission it matches for the tokens
+    and if it matches it will accept it otherwise not.
+24. Like we had wtforms in Flask, Django also provides ways to work with forms
+25. We usually do both client-side and server-side validation as client may be running on obsolete website
+26. 
