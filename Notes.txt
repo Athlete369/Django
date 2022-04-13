@@ -14,3 +14,23 @@
 5.  It generated a number of files in hellio directory again, we will not be looking at all of them
 6.  Let's first see views.py ---- which basicallty tell what a user sees when it visits a particular route
 7.  We can install our hello app in lecture3 project by adding this hello in settingspy--installed_apps
+8.  Then, in the projects url.py we inlcude our app urls, by using include function
+9.  We can add a custom route also, <> comes into the picture
+    path("<str:name>",views.greet,name="greet")
+    so whatever string is passes into the url after hello will be passed on as a parameter to greet function
+10. Till now we were returning HttpResponse from the views.py file only, but we can separate the python and html code
+    like the way we did in Flask
+11. Here also we will render a template and by default it will try to look for the specified template in the templates
+    directory.
+12. how to do this actually--- return render(request,"hello/index.html")
+    It is best practice to keep different html files inside the appName directory inside the templates directory
+13. So far, we rendered a static html file, and html files are not supposed to have variable etc
+14. But, in order to have a dynamic page, we can pass some variable to the HTML page by using Django template engine
+    which is quite similar to Jinja2 which we have used in Flask.
+15. In flask we were passing on the varibles,, here we can pass a dictionary which in django terms we call a context.
+16. Same as Flask, in Django we need to keep our static files in static directory only
+17. and in order to load the static files we need to tell Django to load it by adding
+    {% load static %} on top of the html file
+18. These changes will not be detected byt the runserver and we need to manually restart our server.
+19. Let's create a to do app
+20.

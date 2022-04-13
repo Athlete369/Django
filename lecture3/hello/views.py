@@ -1,7 +1,16 @@
+from cgitb import reset
 from django.http import HttpResponse
 from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello, World!")
+    return render(request,"hello/index.html")
+
+def trija(request):
+    return HttpResponse("Hello, Trijaaaaa!")
+
+def greet(request,name):
+    return render(request,"hello/greet.html",{
+        "name":name.capitalize()
+    })
